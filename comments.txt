@@ -1,0 +1,40 @@
+
+If check with the invalid URL it gives the error as below
+{
+    "error": true,
+    "message": "Url is not valid",
+    "data": null
+}
+
+This is the correct response that I got from the postman.
+localhost:8002/numbers?u=localhost:8090/primes&u=localhost:8090/fibo
+
+result is  - 
+{
+    "Numbers": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        8,
+        11,
+        13,
+        21
+    ]
+}
+
+
+Confilct in the following - 
+If only one url return error or too long to respond, what is need to be done.
+However I have given the result of one Url also.
+
+ex - say prime url too long to respond, but fibo gives the result, then it will print the 
+	result of fibo end point.
+
+
+Few unit tests have written in the manager_test.go, numberHandler_test.go files. (see the manager folder and handler folder inside the folder structure.)
+
+##I have not added the binary file here. Please generate it.
+
+
